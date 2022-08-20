@@ -67,8 +67,10 @@ public class DragonMatrix : SerializedMonoBehaviour
         //wait all dragons move down completely
         for (int i = 0; i < 5; i++)
             for (int j = 0; j < 5; j++)
-                if (path[i, j] != 0 && !dragons[i, j].IsOnTop())
-                    yield return new WaitForSeconds(0.05f);
+                while (path[i, j] != 0 && !dragons[i, j].IsOnTop())
+                    //yield return new WaitForSeconds(0.05f);
+                    yield return null;
+
 
         int length = 0; // quang duong dai nhat
         for (int i = 0; i < 5; i++)

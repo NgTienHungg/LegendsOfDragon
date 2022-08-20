@@ -10,7 +10,6 @@ public class GiftCardManager : MonoBehaviour
     {
         if (hasSelected)
         {
-            //Debug.Break();
             hasSelected = false;
             foreach (var card in cards)
                 card.PostUp();

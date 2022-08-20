@@ -9,7 +9,7 @@ public class GiftButton : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("HaveGift") == 1)
         {
-            notification.text = "Uraa!!!";
+            notification.text = "Click!!!";
         }
         else
             notification.text = "Wait!!!";
